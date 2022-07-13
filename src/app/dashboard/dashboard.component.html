@@ -1,0 +1,57 @@
+<form class="detail">
+    <div class="row"></div>
+    <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label textAlign">Name: </label>
+        <div class="col-sm-10 widthBox">
+            <input id="name" class="form-control col" type="text" [formControl]="name">
+        </div>
+    </div>
+    <br>
+    <div class="row mb-3">
+        <label for="Address"  class="col-sm-2 col-form-label textAlign">Address: </label>
+        <div class="col-sm-10 widthBox">
+            <textarea id="address" class="form-control" type="text" [formControl]="address"></textarea>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="dob"  class="col-sm-2 col-form-label textAlign">DOB: </label>
+        <div class="col-sm-10 widthBox">
+            <input id="dob" class="form-control" type="date" [formControl]="dob">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="role"  class="col-sm-2 col-form-label textAlign">Role: </label>
+        <div class="col-sm-10 widthBox">
+            <select id="role" class="form-control" type="text" [formControl]="role">
+            <option>Admin</option>
+            <option>Manager</option>
+            <option>HR</option>
+            <option>Developer</option>
+        </select>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="phone"  class="col-sm-2 col-form-label textAlign">Phone: </label>
+        <div class="col-sm-10 widthBox">
+            <input id="phone" type="text" class="form-control" [formControl]="phone">
+        </div>
+    </div>
+    <div class="radio-inline row mb-3">
+        <label for="gender"  class="col-sm-2 col-form-label textAlign">Gender: </label>
+        <div class="col-sm-2 widthGender">
+            <input type="radio" [value]="true" [formControl]="gender">Male
+            <input type="radio" [value]="false" [formControl]="gender" checked>Female
+        </div>
+        <div class="col-sm-6"></div>
+    </div>
+
+
+
+    
+<div class="row mb-3">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <button (click)="submit()">Submit</button>
+    </div>
+</div>
+</form>
