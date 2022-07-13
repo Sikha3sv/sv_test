@@ -23,30 +23,36 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  submit()
+  submit(event:any)
   {
+    console.log(this.gender.value)
     if(this.name.value == "")
     {
+      event.preventDefault();
       alert("plase enter name");
     }
     else if(this.address.value == "")
     {
+      event.preventDefault();
       alert("please enter address")
     }
     else if(this.dob.value == "")
     {
+      event.preventDefault();
       alert("please enter DOB");
     }
-    // else if(this.gender.value == "")
+    // else if(this.gender.value ==null)
     // {
     //   alert("please choose gender");
     // }
     else if(this.role.value == "")
     {
+      event.preventDefault();
       alert("please choose DOB");
     }
     else if(this.phone.value == "")
     {
+      event.preventDefault();
       alert("please enter phone");
     }
     else

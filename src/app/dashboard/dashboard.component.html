@@ -4,7 +4,7 @@
     <div class="row mb-3">
         <label for="name" class="col-sm-2 col-form-label textAlign">Name: </label>
         <div class="col-sm-10 widthBox">
-            <input id="name" class="form-control col" placeholder="Enter Name" type="text" [formControl]="name">
+            <input id="name" class="form-control col" placeholder="Enter Name" type="text" [formControl]="name" required>
         </div>
     </div>
     <br>
@@ -41,8 +41,8 @@
     <div class="radio-inline row mb-3">
         <label for="gender"  class="col-sm-2 col-form-label textAlign">Gender: </label>
         <div class="col-sm-2 widthGender">
-            <input type="radio" [value]="true" [formControl]="gender">Male
-            <input type="radio" [value]="false" [formControl]="gender">Female
+            <input class="form-check-input"  type="radio" [value]="true" [formControl]="gender">&nbsp;&nbsp;Male&nbsp;&nbsp;
+            <input class="form-check-input" type="radio" [value]="false" [formControl]="gender" [ngModel]="false" >&nbsp;&nbsp;Female&nbsp;&nbsp;
         </div>
         <div class="col-sm-6"></div>
     </div>
@@ -53,7 +53,7 @@
 <div class="row mb-3">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-        <button (click)="submit()" class="btn btn-outline-success">Submit</button>
+        <button (click)="submit($event)" class="btn btn-outline-success">Submit</button>
     </div>
 </div>
 </form>
