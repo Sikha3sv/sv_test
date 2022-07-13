@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -23,6 +25,32 @@ export class DashboardComponent implements OnInit {
   }
   submit()
   {
+    if(this.name.value == "")
+    {
+      alert("plase enter name");
+    }
+    else if(this.address.value == "")
+    {
+      alert("please enter address")
+    }
+    else if(this.dob.value == "")
+    {
+      alert("please enter DOB");
+    }
+    // else if(this.gender.value == "")
+    // {
+    //   alert("please choose gender");
+    // }
+    else if(this.role.value == "")
+    {
+      alert("please choose DOB");
+    }
+    else if(this.phone.value == "")
+    {
+      alert("please enter phone");
+    }
+    else
+    {
     console.log(JSON.stringify(this.name.value));
     localStorage.setItem('name',JSON.stringify(this.name.value));
     localStorage.setItem('address',JSON.stringify(this.address.value));
@@ -32,5 +60,6 @@ export class DashboardComponent implements OnInit {
     localStorage.setItem('gender',JSON.stringify(this.gender.value));
     this.router.navigate(['/submit']);
   }
+}
 
 }
